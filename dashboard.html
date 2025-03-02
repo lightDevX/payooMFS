@@ -3,9 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DashBord</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h2>Welcome to the Dashbord</h2>
+    <main class="flex justify-center mt-20">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <div class="w-80 h-3/4 bg-blue-100 rounded-xl">
+              <!-- Balance part -->
+              <div
+                class="flex items-center justify-between mt-5 px-3 text-white font-bold">
+                <div class="bg-slate-400 p-5 rounded-md">
+                  <h2>Milkyyat</h2>
+                </div>
+                <div class="flex items-center bg-slate-400 p-5 rounded-md ">
+                  <p>Balance : $</p>
+                  <p class="px-1" id="preBalance">5700</p>
+                </div>
+              </div>
+              <!-- End of Balance part -->
+
+              <div class="divider h-2"></div>
+              <!-- Balance set  -->
+              <div class="flex justify-between items-center p-6">
+                <div
+                  class="w-32 h-10 rounded-lg bg-slate-400 text-white text-center font-semibold">
+                  <button class="w-full h-full" id="addMoney">Add Money</button>
+                </div>
+                <div
+                  class="w-32 h-10 rounded-lg bg-slate-400 text-white text-center font-semibold">
+                  <button class="w-full h-full">Cash Out</button>
+                </div>
+              </div>
+              <!-- End of Balance set  -->
+              <div class="divider h-2"></div>
+              <!-- form field  -->
+              <div>
+                <form class="hidden" id="add-money">
+                  <div
+                    class="card bg-white w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                      <fieldset class="fieldset">
+                        <div class="mb-4">
+                          <label class="fieldset-label">Amount</label>
+                          <input
+                          id="amount"
+                            type="text"
+                            class="input bg-slate-200 mt-2"
+                            placeholder="Amount" />
+                        </div>
+                        <div>
+                          <label class="fieldset-label">Pin Number</label>
+                          <input
+                            id="pinNumber"
+                            type="password"
+                            class="input bg-slate-200 mt-2"
+                            placeholder="Pin" />
+                        </div>
+                        <div
+                          class="w-32 h-10 rounded-lg bg-slate-400 text-white text-center font-semibold mt-4">
+                          <button class="w-full h-full" id="btnSubmit">
+                            Submit
+                          </button>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/fintech.js"></script>
   </body>
 </html>
